@@ -2,7 +2,6 @@
 <arg name="offline"          default="false"/>
 <include unless="$(arg offline)" 
     file="$(find realsense2_camera)/launch/rs_camera.launch">
-    <!--arg name="align_depth" value="true"/-->
     <arg name="linear_accel_cov" value="1.0"/>
     <arg name="enable_gyro" value="true"/>
     <arg name="enable_accel" value="true"/>
@@ -21,13 +20,8 @@
     <remap from="/imu/data_raw" to="/camera/imu"/>
 </node>
 
-
 <include file="$(find rtabmap_ros)/launch/rtabmap.launch">
     <arg name="args" value="--delete_db_on_start"/>
-    <!--arg name="rgb_topic" value="/camera/color/image_raw"/-->
-    <!--arg name="depth_topic" value="/camera/aligned_depth_to_color/image_raw"/-->
-    <!--arg name="camera_info_topic" value="/camera/color/camera_info"/-->
-    <!--arg name="depth_camera_info_topic" value="/camera/depth/camera_info"/-->
     <arg name="rtabmapviz" value="false"/>
     <arg name="rviz" value="true"/>
     <arg name="left_image_topic" value="/camera/infra1/image_rect_raw"/>
@@ -50,8 +44,8 @@
                                         true,true,true]
 </rosparam>
 <param name="/ukf_se/odom0_relative" value="true"/>
-<!--param name="/ukf_se/odom0_pose_rejection_threshold" value="5"/-->
-<!--param name="/ukf_se/odom0_twist_rejection_threshold" value="2"/-->
+<param name="/ukf_se/odom0_pose_rejection_threshold" value="10000000"/>
+<param name="/ukf_se/odom0_twist_rejection_threshold" value="10000000"/>
 
 <param name="/ukf_se/imu0" value="/imu/data"/>
 <rosparam param="/ukf_se/imu0_config">[false, false, false,
@@ -63,8 +57,5 @@
 <param name="/ukf_se/imu0_differential" value="true"/>
 <param name="/ukf_se/imu0_relative" value="false"/>
 <param name="/ukf_se/use_control" value="false"/>
-<!-- <param name="/ukf_se/odom0_config" value="{true,true,true,}"/> -->
-
-
 
 </launch>
