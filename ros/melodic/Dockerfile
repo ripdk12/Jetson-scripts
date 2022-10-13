@@ -56,8 +56,6 @@ RUN mkdir -p ${HOME}/catkin_ws/src && mkdir -p ${HOME}/src/installRealSenseROS
 # set up environment
 COPY config/px4_build.sh /sbin/px4_build.sh
 RUN sudo chmod +x /sbin/px4_build.sh ; sudo chown ros /sbin/px4_build.sh ; sync ; /bin/bash -c /sbin/px4_build.sh ; sudo rm /sbin/px4_build.sh
-COPY config/installRealSenseROS /home/ros/src/installRealSenseROS
-RUN sudo chmod +x /home/ros/src/installRealSenseROS/installRealSenseROS.sh ; sudo chown ros /home/ros/src/installRealSenseROS/installRealSenseROS.sh ; sync ; /bin/bash -c /home/ros/src/installRealSenseROS/installRealSenseROS.sh ; sudo rm -rf /home/ros/src/installRealSenseROS
 # Change entrypoint to source ~/.bashrc and start in ~
 COPY config/entrypoint.sh /ros_entrypoint.sh
 RUN sudo chmod +x /ros_entrypoint.sh ; sudo chown ros /ros_entrypoint.sh ;

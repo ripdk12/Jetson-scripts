@@ -56,7 +56,7 @@ sudo apt install python-rosdep python-rosinstall python-rosinstall-generator pyt
 
 # MAVROS: https://dev.px4.io/en/ros/mavros_installation.html
 ## Install dependencies
-sudo apt-get install -y python-catkin-tools python-rosinstall-generator ros-melodic-octomap ros-melodic-octomap-mapping ros-melodic-pcl-ros ros-melodic-imu-filter-madgwick ros-melodic-rtabmap ros-melodic-rtabmap-ros ros-melodic-robot-localization
+sudo apt-get install -y python-catkin-tools python-rosinstall-generator ros-melodic-octomap ros-melodic-octomap-mapping ros-melodic-octomap-rviz-plugins ros-melodic-pcl-ros ros-melodic-imu-filter-madgwick ros-melodic-rtabmap ros-melodic-rtabmap-ros ros-melodic-robot-localization
 
 cd ~/catkin_ws
 catkin init
@@ -124,10 +124,7 @@ sudo apt-key adv --keyserver keyserver.ubuntu.com  --recv-key F6E65AC044F831AC80
 
 sudo add-apt-repository "deb https://librealsense.intel.com/Debian/apt-repo $(lsb_release -cs) main" -u
 
-#sudo apt install apt-utils -y
-
 sudo apt install librealsense2=2.50.0-0~realsense0.6127 librealsense2-gl=2.50.0-0~realsense0.6127 librealsense2-net=2.50.0-0~realsense0.6127 librealsense2-utils=2.50.0-0~realsense0.6127 librealsense2-dev=2.50.0-0~realsense0.6127 librealsense2-udev-rules=2.50.0-0~realsense0.6127 -y
-
 
 
 
