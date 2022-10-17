@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <arg name="ns" default="/"/>
+  <arg name="fcu_url" default="/dev/ttyACM0:500000"/>
+  <arg name="gcs_url" default="udp://@192.168.1.174:14550" />
+  <!--arg name="gcs_url" default="udp://@192.168.86.24:14550" /-->   <!-- QGC running on Ubuntu -->
+  <arg name="tgt_system" default="1" />
+  <arg name="tgt_component" default="1" />
+  
+  <!-- Launch bridge -->
+  <include file="$(find px4_realsense_bridge)/launch/bridge.launch" >
+  </include>
+
+  <!-- Launch MavROS -->
+  <group ns="$(arg ns)">
+      <include file="$(find mavros)/launch/node.launch">
+          <arg name="pluginlists_yaml" value="$(find mavros)/launch/px4_pluginlists.yaml" />
+          <!-- Need to change the config file to get the tf topic and get local position in terms of local origin -->
+          <arg name="config_yaml" value="$(find mavros)/launch/px4_config.yaml" />
+          <arg name="fcu_url" value="$(arg fcu_url)" />
+          <arg name="gcs_url" value="$(arg gcs_url)" />
+          <arg name="tgt_system" value="$(arg tgt_system)" />
+          <arg name="tgt_component" value="$(arg tgt_component)" />
+      </include>
+  </group>
+
+
+<!--
+  Arguments
+-->
+
+<arg name="output" default="screen" />
+<arg name="node_prefix" default="" />
+<arg name="config_file" default=""/>
+<arg name="publish_hw_timestamps" default="false"/>
+<arg name="dataset_path" default=""/>
+<arg name="dataset_timescale" default="-1"/>
+<arg name="session_file" default=""/>
+<arg name="session_save_dir" default="$(optenv SLAMCORE_SESSION_SAVE_DIR)"/>
+<arg name="advertise_images" default="true"/>
+<arg name="odom_reading_topic" default="" />
+<arg name="generate_map2d" default="false" />
+<arg name="enable_color" default="false" />
+<arg name="publish_tf" default="true" />
+
+<!--
+  If true, the default system behaviour of depth being enabled or not will be overriden by the
+  value of the `realsense_depth_override_value` argument
+-->
+<arg name="override_realsense_depth" default="false"/>
+<!-- If true force depth on, else off (only used if `override_realsense_depth` is true) -->
+<arg name="realsense_depth_override_value" default="true"/>
+
+<!-- The name given to the world fixed coordinate frame the pose is published relative to -->
+<arg name="map_frame" default="map"/>
+<!-- The name given to the world fixed coordinate frame (published on tf)
+     that is smooth but drifts over time -->
+<arg name="odom_frame" default="odom"/>
+<!-- The coordinate frame which the pose refers to -->
+<arg name="base_frame" default="camera_link"/>
+
+<!--
+  Use it when playing back logged/simulated data - Should also have a node
+  publishing the clock
+-->
+<arg name="use_sim_time" default="false" />
+
+<!--
+  Parameters
+-->
+<param name="/use_sim_time" value="$(arg use_sim_time)" type="bool"/>
+
+<!--
+  Node Configuration
+-->
+<node pkg="slamcore_slam" type="slam_publisher" name="slamcore"
+      output="$(arg output)"
+      launch-prefix="$(arg node_prefix)"
+      required="true">
+
+    <param name="config_file" value="$(arg config_file)" type="str"/>
+    <param name="publish_hw_timestamps" value="$(arg publish_hw_timestamps)" type="bool"/>
+    <param name="dataset_path" value="$(arg dataset_path)" type="str"/>
+    <param name="dataset_timescale" value="$(arg dataset_timescale)" type="double"/>
+    <param name="override_realsense_depth" value="$(arg override_realsense_depth)" type="bool"/>
+    <param name="realsense_depth_override_value" value="$(arg realsense_depth_override_value)" type="bool"/>
+    <param name="session_file" value="$(arg session_file)" type="str"/>
+    <param name="session_save_dir" value="$(arg session_save_dir)" type="str"/>
+    <param name="advertise_images" value="$(arg advertise_images)" type="bool"/>
+    <param name="odom_reading_topic" value="$(arg odom_reading_topic)" type="str"/>
+    <param name="generate_map2d" value="$(arg generate_map2d)" type="bool"/>
+    <param name="enable_color" value="$(arg enable_color)" type="bool"/>
+    <param name="publish_tf" value="$(arg publish_tf)" type="bool"/>
+    <param name="map_frame" value="$(arg map_frame)" type="str"/>
+    <param name="odom_frame" value="$(arg odom_frame)" type="str"/>
+    <param name="base_frame" value="$(arg base_frame)" type="str"/>
+</node>
+
+</launch>
