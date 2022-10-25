@@ -8,3 +8,17 @@ https://docs.nvidia.com/jetson/archives/l4t-archived/l4t-3261/index.html#page/Te
 
 #### Solution to librealsense2 certificate issue
 https://github.com/IntelRealSense/librealsense/issues/10980
+
+#### error msg
+
+--- stderr: realsense2_camera          
+CMake Error at /workspaces/isaac_ros-dev/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/ament_cmake_export_targets-extras.cmake:18 (message):
+  Failed to find exported target names in
+  '/workspaces/isaac_ros-dev/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/export_realsense2_camera_msgs__rosidl_generator_cExport.cmake'
+Call Stack (most recent call first):
+  /workspaces/isaac_ros-dev/install/realsense2_camera_msgs/share/realsense2_camera_msgs/cmake/realsense2_camera_msgsConfig.cmake:41 (include)
+  CMakeLists.txt:96 (find_package)
+
+
+---
+Failed   <<< realsense2_camera [7.39s, exited with code 1]
