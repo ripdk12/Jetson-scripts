@@ -54,6 +54,12 @@ git clone -b release-dp-1.1 https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_nitros
 ```
 git clone https://github.com/IntelRealSense/realsense-ros.git -b ros2-beta
 ```
+
+```
+cd ~/workspaces/isaac_ros-dev/src/isaac_ros_common/scripts && \
+touch .isaac_ros_common-config && \
+echo CONFIG_IMAGE_KEY=humble.nav2.realsense > .isaac_ros_common-config
+```
 ## Useful Links
 
 #### Guide for flashing and booting from ssd/usb device
