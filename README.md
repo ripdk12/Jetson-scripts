@@ -15,9 +15,9 @@ systemctl start udisks2.service
 ```
 When finished remember to also install CUDA and NVIDIA Container Runtime SDK components in order to run docker containers with Nvidia runtime support.
 
-### 2. librealsense
-Following the guide on https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_visual_slam#docker, download the git repos required for your application
-NOTE: librealsense2 might be required to be installed outside of the container in order to get the RealSense camera to work. (Unsure about this)
+### 2. librealsense - optional
+
+Following the guide on https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_visual_slam#docker, download the git repos required for your application.
 ``` 
 chmod +x installlibrealsense.sh
 chmod +x realsense_dependencies.sh
@@ -43,13 +43,13 @@ Lastly follow this quickstart setup for Isaac ROS Visual SLAM: https://github.co
 mkdir -p ~/workspaces/isaac_ros-dev/src && cd ~/workspaces/isaac_ros-dev/src
 ```
 ```
-git clone -b release-dp-1.1 https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_common
+git clone https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_common
 ```
 ```
-git clone -b release-dp-1.1 https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_visual_slam
+git clone https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_visual_slam
 ```
 ```
-git clone -b release-dp-1.1 https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_nitros
+git clone https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_nitros
 ```
 ```
 git clone https://github.com/IntelRealSense/realsense-ros.git -b ros2-beta
