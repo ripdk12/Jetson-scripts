@@ -52,7 +52,7 @@ git clone https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_visual_slam
 git clone https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_nitros
 ```
 ```
-git clone https://github.com/IntelRealSense/realsense-ros.git -b ros2-beta
+git clone https://github.com/IntelRealSense/realsense-ros.git
 ```
 
 ```
