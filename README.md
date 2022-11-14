@@ -75,3 +75,8 @@ I believe it's similar to the issue described here: https://github.com/NVIDIA-IS
 
 
 I am mostly interested in a free solution for visual inertial odometry, (currently using slamcore which works great but is closed source and expensive), as I need to use this data to stabilize a drone. Should i try an older version of isaac ros? Or are there alternatives?I already tried RTAB-MAP on ros1 melodic, but the odom data was too slow (3-7 hz), and ORBSLAM3 (too nooby to figure out how to publish Nav_msgs/Odometry message).
+
+https://event.on24.com/eventRegistration/EventLobbyServlet?target=lobby30.jsp&eventid=3998179&sessionid=1&usercd=573892668&eventuserid=573892668&key=903C08D04A5A360F6F667565F2684122&showCode=elitenvidiabrill&showId=1407606&source=GATEWAY-1407606|XP-3998202&rId=3998202&rKey=D87BCAB879E2CA2EE4E37156A05D22C4&oriontokens=eventId-3998179|userId-573892668|gatewayId-1407606|experienceId-3998202|contentType-webcast|hideDownloadPDF-false
+
+
+
