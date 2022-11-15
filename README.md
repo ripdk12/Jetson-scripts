@@ -68,6 +68,12 @@ https://docs.nvidia.com/jetson/archives/l4t-archived/l4t-3261/index.html#page/Te
 #### Solution to librealsense2 certificate issue
 https://github.com/IntelRealSense/librealsense/issues/10980
 
+#### Enabling microRTPS client on Cube Orange+
+
+https://github.com/PX4/PX4-Autopilot/issues/20187
+
+https://github.com/PX4/PX4-Autopilot/pull/20304
+
 #### gg
 ```
   876  git clone --branch pr-cubeorange+ --recursive https://github.com/CubePilot/PX4-Autopilot.git
