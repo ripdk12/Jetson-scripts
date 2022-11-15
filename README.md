@@ -69,21 +69,32 @@ https://docs.nvidia.com/jetson/archives/l4t-archived/l4t-3261/index.html#page/Te
 https://github.com/IntelRealSense/librealsense/issues/10980
 
 #### gg
-
+```
   876  git clone --branch pr-cubeorange+ --recursive https://github.com/CubePilot/PX4-Autopilot.git
+  
   877  cd PX4-Autopilot/
+  
   878  make cubepilot_cubeorangeplus
+  
   879  make cubepilot_cubeorangeplus_default upload
+  
   880  pip3 install kconfiglib
+  
   881  make cubepilot_cubeorangeplus_default upload
+  
   882  pip3 install --user jsonschema
+  
   883  make cubepilot_cubeorangeplus_default upload
+  
   884  git tag --help
+ 
   885  git tag v1.15.0
+  
   886  git tag -a v1.15.0
+  
   887  git tag
+  
   888  make cubepilot_cubeorangeplus_default upload
-
-
+```
 
 
