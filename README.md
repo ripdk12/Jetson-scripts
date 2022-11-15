@@ -70,13 +70,20 @@ https://github.com/IntelRealSense/librealsense/issues/10980
 
 #### gg
 
-I have setup the docker development environment with isaac_ros_visual_slam and RealSense D435i camera on a Xavier NX (JP5.0.2), following the guide on github, however, the results are extremely poor as shown in the picture. 
-I believe it's similar to the issue described here: https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_visual_slam/issues/54
+  876  git clone --branch pr-cubeorange+ --recursive https://github.com/CubePilot/PX4-Autopilot.git
+  877  cd PX4-Autopilot/
+  878  make cubepilot_cubeorangeplus
+  879  make cubepilot_cubeorangeplus_default upload
+  880  pip3 install kconfiglib
+  881  make cubepilot_cubeorangeplus_default upload
+  882  pip3 install --user jsonschema
+  883  make cubepilot_cubeorangeplus_default upload
+  884  git tag --help
+  885  git tag v1.15.0
+  886  git tag -a v1.15.0
+  887  git tag
+  888  make cubepilot_cubeorangeplus_default upload
 
-
-I am mostly interested in a free solution for visual inertial odometry, (currently using slamcore which works great but is closed source and expensive), as I need to use this data to stabilize a drone. Should i try an older version of isaac ros? Or are there alternatives?I already tried RTAB-MAP on ros1 melodic, but the odom data was too slow (3-7 hz), and ORBSLAM3 (too nooby to figure out how to publish Nav_msgs/Odometry message).
-
-https://event.on24.com/eventRegistration/EventLobbyServlet?target=lobby30.jsp&eventid=3998179&sessionid=1&usercd=573892668&eventuserid=573892668&key=903C08D04A5A360F6F667565F2684122&showCode=elitenvidiabrill&showId=1407606&source=GATEWAY-1407606|XP-3998202&rId=3998202&rKey=D87BCAB879E2CA2EE4E37156A05D22C4&oriontokens=eventId-3998179|userId-573892668|gatewayId-1407606|experienceId-3998202|contentType-webcast|hideDownloadPDF-false
 
 
 
