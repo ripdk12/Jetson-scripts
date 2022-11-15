@@ -74,6 +74,8 @@ https://github.com/PX4/PX4-Autopilot/issues/20187
 
 https://github.com/PX4/PX4-Autopilot/pull/20304
 
+https://github.com/PX4/px4_ros_com/issues/166
+
 #### gg
 ```
   876  git clone --branch pr-cubeorange+ --recursive https://github.com/CubePilot/PX4-Autopilot.git
