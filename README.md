@@ -68,6 +68,9 @@ https://docs.nvidia.com/jetson/archives/l4t-archived/l4t-3261/index.html#page/Te
 #### Solution to librealsense2 certificate issue
 https://github.com/IntelRealSense/librealsense/issues/10980
 
+#### How to calculate position covariance in robot
+https://github.com/Sollimann/CleanIt/blob/main/autonomy/src/slam/README.md
+
 #### Enabling microRTPS client on Cube Orange+
 
 https://github.com/PX4/PX4-Autopilot/issues/20187
