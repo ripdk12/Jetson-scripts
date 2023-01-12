@@ -79,6 +79,12 @@ https://github.com/PX4/PX4-Autopilot/pull/20304
 
 https://github.com/PX4/px4_ros_com/issues/166
 
+#### Helpful info from github PR's
+
+https://github.com/stevehenderson/px4-offboard/blob/feature/tutorial/doc/ROS2_PX4_Offboard_Tutorial.md
+
+
+
 #### gg
 ```
   876  git clone --branch pr-cubeorange+ --recursive https://github.com/CubePilot/PX4-Autopilot.git
