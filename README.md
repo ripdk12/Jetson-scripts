@@ -115,3 +115,13 @@ https://github.com/stevehenderson/px4-offboard/blob/feature/tutorial/doc/ROS2_PX
 ```
 
 
+### Flight logs
+
+good:
+https://review.px4.io/plot_app?log=617af2bc-1afb-4b49-b282-c25612c6c6d0
+https://review.px4.io/plot_app?log=022ee2b5-1fa0-42f8-9211-0dea2d36d4b9
+https://review.px4.io/plot_app?log=9e9318c8-c40a-499c-a3f7-16c6b785a11d
+
+bad:
+https://review.px4.io/plot_app?log=b3cfc2fb-83ef-431a-890c-e9b905b5fb6f
+https://review.px4.io/plot_app?log=9fd1eac0-435e-49f6-bb46-05f5b67ff766
