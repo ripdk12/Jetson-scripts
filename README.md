@@ -132,9 +132,11 @@ https://review.px4.io/plot_app?log=9fd1eac0-435e-49f6-bb46-05f5b67ff766
 Good 4 min. outdoor flight with VIO no GPS fusion (no bag):
 https://review.px4.io/plot_app?log=3125aeee-28a0-4cb2-b88f-a0a7cb02b523
 
-Outdoor flight with VIO dropping cause of bad rosbag setting (no bag?)
+Outdoor flight with VIO dropping cause of bad rosbag setting (no bag?):
 https://review.px4.io/plot_app?log=584d012b-edd7-48b6-9de0-1c10e71b0870
 
+Good indoor flight, no GPS, sudden crash and ```action_request lost```:
+https://review.px4.io/plot_app?log=d9ddb736-a201-46b0-8e66-4c25ae7a705d
 
 ### Other sht
 ros2 bag setting: https://answers.ros.org/question/391514/detect-messages-dropped-by-ros2-bag-record/
