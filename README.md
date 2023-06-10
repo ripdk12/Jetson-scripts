@@ -138,5 +138,11 @@ https://review.px4.io/plot_app?log=584d012b-edd7-48b6-9de0-1c10e71b0870
 Good indoor flight, no GPS, sudden crash and ```action_request lost```:
 https://review.px4.io/plot_app?log=d9ddb736-a201-46b0-8e66-4c25ae7a705d
 
+good indoor flight, no GPS:
+https://review.px4.io/plot_app?log=b4ad461f-5183-47f5-bc03-3011f02c23f3
+
+good indoor flight, with GPS fusion:
+https://review.px4.io/plot_app?log=d07c32e9-2154-4333-98c1-714442520486
+
 ### Other sht
 ros2 bag setting: https://answers.ros.org/question/391514/detect-messages-dropped-by-ros2-bag-record/
